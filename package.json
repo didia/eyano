@@ -5,8 +5,11 @@
   "main": "index.js",
   "scripts": {
     "analyze": "ANALYZE=1 next build",
+    "build": "next build",
     "precommit": "lint-staged",
-    "start": "node server.js",
+    "dev": "next",
+    "start": "next start",
+    "server": "node server.js",
     "test": "jest"
   },
   "lint-staged": {
@@ -23,10 +26,13 @@
     "isomorphic-unfetch": "^2.0.0",
     "next": "^5.0.0",
     "prop-types": "^15.6.0",
+    "raw-loader": "^0.5.1",
     "react": "^16.2.0",
     "react-cookie": "^2.1.2",
     "react-dom": "^16.2.0",
+    "react-inlinesvg": "^0.7.5",
     "react-intl": "^2.4.0",
+    "react-svg-inline": "^2.1.0",
     "universal-cookie-express": "^2.1.2",
     "webpack-bundle-analyzer": "^2.10.0"
   },

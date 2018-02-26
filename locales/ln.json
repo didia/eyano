@@ -1,4 +1,7 @@
 {
+  "components.search-box.placeholder": "Trouver réponse na question na yo",
+  "components.search-box.title": "Na lingi na yeba…?",
+
   "constants.languages.fr": "français",
   "constants.languages.ln": "lingala",
 

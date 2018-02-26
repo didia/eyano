@@ -10,10 +10,10 @@ export default ComposedComponent =>
       cookies: PropTypes.object
     };
 
-    static async getInitialProps({ req }) {
+    static async getInitialProps(ctx) {
       return {
-        cookies: req ? req.universalCookies : undefined,
-        ...loadGetInitialProps(ComposedComponent)
+        cookies: ctx && ctx.req ? ctx.req.universalCookies : undefined,
+        ...(await loadGetInitialProps(ComposedComponent, ctx))
       };
     }
 

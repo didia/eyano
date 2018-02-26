@@ -2,9 +2,8 @@
 
 module.exports = {
   webpack: config => {
-    config.externals = {
-      fs: 'fs'
-    };
+    config.externals = config.externals || {};
+    config.externals.push('fs');
 
     if (process.env.ANALYZE) {
       // eslint-disable-next-line

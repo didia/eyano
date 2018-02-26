@@ -1,4 +1,7 @@
 {
+  "components.search-box.placeholder": "Trouver la réponse à votre question",
+  "components.search-box.title": "Je veux savoir…",
+
   "constants.languages.fr": "français",
   "constants.languages.ln": "lingala",
 

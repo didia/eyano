@@ -1,11 +1,12 @@
-const layoutStyle = {
-  margin: 20,
-  padding: 20,
-  border: '1px solid #DDD'
-};
+import Header from '../Header';
 
-const Layout = props => {
-  return <div style={layoutStyle}>{props.children}</div>;
+const Layout = ({ children }) => {
+  return (
+    <div>
+      <Header />
+      {children}
+    </div>
+  );
 };
 
 export default Layout;

@@ -8,8 +8,6 @@ import ln from 'react-intl/locale-data/ln';
 import fr from 'react-intl/locale-data/fr';
 import { COOKIES, DEFAULT_LOCALE } from '../config/environment';
 
-// server-side: for performance, keep in memory messages for different locales
-const intlCache = new Map();
 //  client-side: remember the user's locale messages across page changes
 let locale;
 let messages;
@@ -24,24 +22,24 @@ export default ComposedComponent =>
       messages: PropTypes.object.isRequired
     };
 
-    static async getInitialProps({ req }) {
+    static async getInitialProps(ctx) {
       if (!process.browser) {
-        locale = req.universalCookies.get(COOKIES.LOCALE) || DEFAULT_LOCALE;
-        if (!intlCache.has(locale)) {
-          const messageFile = require.resolve(`../locales/${locale}.json`);
-          // eslint-disable-next-line global-require
-          messages = JSON.parse(
-            require('fs').readFileSync(messageFile, 'utf8')
-          );
-          intlCache.set(locale, messages);
+        locale = ctx.req.universalCookies
+          ? ctx.req.universalCookies.get(COOKIES.LOCALE)
+          : DEFAULT_LOCALE;
+        locale = locale || DEFAULT_LOCALE;
+
+        if (locale === 'ln') {
+          messages = await import('../locales/ln');
+        } else {
+          messages = await import('../locales/fr');
         }
-        messages = intlCache.get(locale);
       }
 
       return {
         locale,
         messages,
-        ...loadGetInitialProps(ComposedComponent)
+        ...loadGetInitialProps(ComposedComponent, ctx)
       };
     }
 
