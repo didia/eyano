@@ -2,10 +2,11 @@
 const express = require('express');
 const next = require('next');
 const cookiesMiddleware = require('universal-cookie-express');
+const routes = require('./routes');
 
 const dev = process.env.NODE_ENV !== 'production';
 const app = next({ dev });
-const handle = app.getRequestHandler();
+const handler = routes.getRequestHandler(app);
 
 app
   .prepare()
@@ -14,9 +15,7 @@ app
 
     server.use(cookiesMiddleware());
 
-    server.get('*', (req, res) => {
-      return handle(req, res);
-    });
+    server.use(handler);
 
     server.listen(3000, err => {
       if (err) throw err;
