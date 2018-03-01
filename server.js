@@ -13,9 +13,9 @@ app
   .then(() => {
     const server = express();
 
-    server.use(cookiesMiddleware());
-
     server.use(handler);
+
+    server.use(cookiesMiddleware());
 
     server.listen(3000, err => {
       if (err) throw err;

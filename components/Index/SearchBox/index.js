@@ -3,6 +3,10 @@ import React from 'react';
 import { injectIntl, intlShape } from 'react-intl';
 import SVG from 'react-inlinesvg';
 
+// Assets
+import searchIcon from '../../../static/images/icon-magnifying-glass.svg';
+import resetIcon from '../../../static/images/icon-close.svg';
+
 class SearchBox extends React.Component {
   constructor() {
     super();
@@ -69,7 +73,7 @@ class SearchBox extends React.Component {
           <button className="reset-button" type="reset">
             <SVG
               className="button-wrapper reset-icon-wrapper"
-              src="/static/images/icon-close.svg"
+              src={resetIcon}
               wrapper={React.createFactory('div')}
             />
           </button>
@@ -82,7 +86,7 @@ class SearchBox extends React.Component {
         >
           <SVG
             className="button-wrapper search-icon-wrapper"
-            src="/static/images/icon-magnifying-glass.svg"
+            src={searchIcon}
             wrapper={React.createFactory('div')}
           />
         </button>

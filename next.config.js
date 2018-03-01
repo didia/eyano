@@ -1,9 +1,26 @@
 /* eslint-disable no-param-reassign */
 
+const dev = process.env.NODE_ENV !== 'production';
+
 module.exports = {
   webpack: config => {
     config.externals = config.externals || {};
     config.externals.push('fs');
+
+    config.module.rules.push({
+      test: /\.(png|jpe?g|gif|webp|svg)$/i,
+      use: [
+        {
+          loader: 'url-loader',
+          options: {
+            outputPath: 'images/',
+            publicPath: '/_next/',
+            name: dev ? '[name]-[hash].[ext]' : '[hash].[ext]',
+            limit: 4000
+          }
+        }
+      ]
+    });
 
     if (process.env.ANALYZE) {
       // eslint-disable-next-line
