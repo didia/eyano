@@ -1,4 +1,6 @@
 {
+  "components.articles-list.title.recent": "Articles récents",
+
   "components.search-box.placeholder": "Trouver la réponse à votre question",
   "components.search-box.title": "Je veux savoir…",
 

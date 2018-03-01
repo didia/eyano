@@ -15,7 +15,7 @@ let messages;
 const localeData = { fr, ln };
 
 export default ComposedComponent =>
-  class WithCookies extends PureComponent {
+  class WithTranslations extends PureComponent {
     static propTypes = {
       cookies: PropTypes.instanceOf(Cookies),
       locale: PropTypes.string.isRequired,
@@ -39,7 +39,7 @@ export default ComposedComponent =>
       return {
         locale,
         messages,
-        ...loadGetInitialProps(ComposedComponent, ctx)
+        ...(await loadGetInitialProps(ComposedComponent, ctx))
       };
     }
 

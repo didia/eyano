@@ -1,0 +1,54 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`SearchBox Component renders as expected 1`] = `
+<form
+  className="jsx-547727129 form"
+  onReset={[Function]}
+  onSubmit={[Function]}
+>
+  <div
+    className="jsx-547727129 input-wrapper"
+  >
+    <input
+      autoFocus={true}
+      className="jsx-547727129 input"
+      onChange={[Function]}
+      placeholder="Trouver la réponse à votre question"
+      value=""
+    />
+    <button
+      className="jsx-547727129 reset-button"
+      type="reset"
+    >
+      <InlineSVG
+        cacheGetRequests={false}
+        className="button-wrapper reset-icon-wrapper"
+        onLoad={[Function]}
+        src="/static/images/icon-close.svg"
+        supportTest={[Function]}
+        uniquifyIDs={true}
+        wrapper={[Function]}
+      />
+    </button>
+  </div>
+  <button
+    className="jsx-547727129 search-button"
+    disabled={true}
+    type="submit"
+  >
+    <InlineSVG
+      cacheGetRequests={false}
+      className="button-wrapper search-icon-wrapper"
+      onLoad={[Function]}
+      src="/static/images/icon-magnifying-glass.svg"
+      supportTest={[Function]}
+      uniquifyIDs={true}
+      wrapper={[Function]}
+    />
+  </button>
+  <JSXStyle
+    css=".form.jsx-547727129{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;box-shadow:0 16px 32px rgba(0,44,80,0.2);}.form.jsx-547727129 .button-wrapper{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;}.input-wrapper.jsx-547727129{display:-webkit-box;display:-webkit-flex;display:-ms-flexbox;display:flex;-webkit-align-items:center;-webkit-box-align:center;-ms-flex-align:center;align-items:center;width:100%;background-color:#fff;padding:16px;}.input.jsx-547727129{width:100%;outline:none;border:none;font-size:20px;color:#595959;-webkit-font-smoothing:antialiased;}.reset-button.jsx-547727129{overflow:hidden;margin-right:4px;opacity:0;-webkit-transition:0.3s opacity ease-in-out;transition:0.3s opacity ease-in-out;cursor:pointer;}.reset-button.jsx-547727129 svg{width:15px;height:15px;fill:#555c5c;}.search-button.jsx-547727129{height:57px;width:57px;-webkit-flex-shrink:0;-ms-flex-negative:0;flex-shrink:0;cursor:pointer;background-color:#006b6b;-webkit-transition:0.3s background-color ease-in-out;transition:0.3s background-color ease-in-out;}.search-button.jsx-547727129 svg{width:20px;height:20px;fill:#fff;}.search-button.jsx-547727129:hover,.search-button.jsx-547727129:active{background-color:#4cc7c7;}.search-button.jsx-547727129:disabled{cursor:default;background-color:#008989;}.search-button.jsx-547727129 .search-icon-wrapper{-webkit-box-pack:center;-webkit-justify-content:center;-ms-flex-pack:center;justify-content:center;}.form--dirty.jsx-547727129 .reset-button.jsx-547727129{opacity:1;}"
+    styleId="547727129"
+  />
+</form>
+`;

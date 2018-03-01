@@ -1,7 +1,7 @@
 // Vendor
 import Link from 'next/link';
 
-import PageWrapper from '../PageWrapper';
+import PageWrapper from '../../PageWrapper/index';
 
 const Header = () => (
   <div className="root">

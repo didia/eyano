@@ -3,7 +3,7 @@ import React from 'react';
 import ShallowRenderer from 'react-test-renderer/shallow';
 import { IntlProvider } from 'react-intl';
 
-import messages from '../../locales/fr';
+import messages from '../../../locales/fr';
 
 import SearchBox from './index';
 
