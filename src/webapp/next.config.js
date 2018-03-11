@@ -3,10 +3,8 @@
 const dev = process.env.NODE_ENV !== 'production';
 
 module.exports = {
+  distDir: "../../dist/functions/next",
   webpack: config => {
-    config.externals = config.externals || {};
-    config.externals.push('fs');
-
     config.module.rules.push({
       test: /\.(png|jpe?g|gif|webp|svg)$/i,
       use: [
@@ -23,7 +21,7 @@ module.exports = {
     });
 
     if (process.env.ANALYZE) {
-      // eslint-disable-next-line
+      // eslint-d isable-next-line
       const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
       config.plugins.push(
         new BundleAnalyzerPlugin({

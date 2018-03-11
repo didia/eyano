@@ -1,0 +1,17 @@
+{
+  "hosting": {
+    "public": "dist/public",
+    "rewrites": [
+      {
+        "source": "**/**",
+        "function": "webapp"
+      }
+    ],
+    "predeploy": "npm run build-public"
+  },
+  "functions": {
+    "source": "dist/functions",
+    "predeploy":
+    "npm run lint && npm run copy-router && npm run build-funcs && npm run build-app && npm run copy-deps && npm run install-deps"
+  }
+}

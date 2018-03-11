@@ -2,7 +2,8 @@
 node_modules
 
 # build output
-.next
+dist/
+src/functions/next
 
 # Intellij
 .idea/

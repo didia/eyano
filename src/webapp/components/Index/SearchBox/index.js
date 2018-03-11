@@ -37,7 +37,7 @@ class SearchBox extends React.Component {
   }
 
   handleSubmit(event) {
-    alert('Search query is: ' + this.state.searchText);
+    window.console.log(`Search query is: ${this.state.searchText}`);
     event.preventDefault();
   }
 
@@ -46,7 +46,7 @@ class SearchBox extends React.Component {
   }
 
   computeFormClassName() {
-    let formBaseClass = 'form';
+    const formBaseClass = 'form';
     return this.hasInput() ? `${formBaseClass} form--dirty` : formBaseClass;
   }
 

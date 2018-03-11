@@ -1,6 +1,7 @@
 import Document, { Head, Main, NextScript } from 'next/document';
+
 export default class MyDocument extends Document {
-  static getInitialProps(ctx) {
+  static async getInitialProps(ctx) {
     return Document.getInitialProps(ctx);
   }
 
